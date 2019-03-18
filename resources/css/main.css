@@ -1,5 +1,3 @@
-@import 'base.css';
-
 .navigation {
 	font-family: var(--heading-font);
 }
@@ -296,6 +294,10 @@
 	border-radius: 10px;
 	-webkit-box-shadow: var(--shadow-light);
 	box-shadow: var(--shadow-light);
+	transition: all 0.2s;
+}
+.how-it-build__step-item:hover {
+	transform: scale(0.9);
 }
 .how-it-build__image {
 	display: block;
@@ -303,6 +305,7 @@
 	height: 18rem;
 	-o-object-fit: scale-down;
 	object-fit: scale-down;
+	transition: all 0.2s;
 }
 
 .how-it-build__text {
@@ -674,7 +677,7 @@
 }
 .footer__logo-text {
 	font-family: var(--heading-font);
-	font-size: 2.5rem;
+	font-size: 3rem;
 	color: var(--color-grey-light-1);
 	text-transform: uppercase;
 }

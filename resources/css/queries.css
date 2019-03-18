@@ -39,12 +39,11 @@
 @media only screen and (max-width: 900px) {
 	/* BASE */
 	/* 1rem = 8px |  8px/16px = 50% */
+
 	html {
 		font-size: 50%;
 	}
-	.header__graphic-box {
-		width: 80%;
-	}
+
 	.h-margin-top-big {
 		margin-top: 5rem !important;
 	}
@@ -63,11 +62,17 @@
 	.h-margin-bottom-small {
 		margin-bottom: 1rem !important;
 	}
-
 	/*-----*/
+
+	.header__graphic-box {
+		width: 80%;
+	}
 
 	.how-it-build {
 		padding: 10rem 0;
+	}
+	.about-me {
+		padding: 15rem 5rem 5rem 5rem;
 	}
 }
 /* Phones */
@@ -96,7 +101,9 @@
 	.navigation__background {
 		left: 3rem;
 	}
-
+	/*------------------------------------*/
+	/* FOOTER*/
+	/*------------------------------------*/
 	.footer__wrapper {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -121,6 +128,9 @@
 		max-width: 100%;
 		text-align: center;
 	}
+	/*------------------------------------*/
+	/* HOW IT BUILD SECTION */
+	/*------------------------------------*/
 	.how-it-build__step-box {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
@@ -132,6 +142,9 @@
 	.how-it-build__step-item:not(:last-child) {
 		margin-bottom: 3rem;
 	}
+	/*------------------------------------*/
+	/* ABOUT ME SECTION */
+	/*------------------------------------*/
 	.about-me {
 		padding: 15rem 2rem 5rem 2rem;
 		-webkit-box-orient: vertical;
