@@ -1,0 +1,34 @@
+.card {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 25%;
+	flex: 0 1 25%;
+	margin: 0 2rem;
+	padding: 3rem 2rem;
+	background-color: var(--white);
+	border-radius: 10px;
+	-webkit-box-shadow: var(--shadow-light);
+	box-shadow: var(--shadow-light);
+	transition: all 0.2s;
+	&:hover {
+		transform: scale(0.9);
+	}
+	&__image {
+		display: block;
+		width: 100%;
+		height: 18rem;
+		-o-object-fit: scale-down;
+		object-fit: scale-down;
+		transition: all 0.2s;
+	}
+
+	&__text {
+		display: block;
+		margin-bottom: 1rem;
+		padding: 2rem 2rem;
+	}
+	@include respond(phone) {
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
+}

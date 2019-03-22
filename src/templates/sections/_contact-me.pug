@@ -1,0 +1,25 @@
+section#contact-me.contact-me
+        .contact-me__form-box
+          form.form(action='#')
+            .h-margin-bottom-medium
+              h2.heading-secondary Contact me now
+            .form__group
+              input#name.form__input(type='text', placeholder='Full name', required='')
+              label.form__label(for='name') Full Name
+            .form__group
+              input#email.form__input(type='email', placeholder='Email address', required='')
+              label.form__label(for='email') Email adress
+            .form__group.u-margin-bottom-medium
+              .form__radio-group
+                input#small.form__radio-input(type='radio', name='size')
+                label.form__radio-label(for='small')
+                  span.form__radio-button
+                  |  Freelancing
+              .form__radio-group
+                input#large.form__radio-input(type='radio', name='size')
+                label.form__radio-label(for='large')
+                  span.form__radio-button
+                  |  Job Offers
+            .form__group.h-margin-top-big
+              button.btn.btn--main(type='submit')
+                | Next step →

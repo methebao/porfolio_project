@@ -1,0 +1,21 @@
+/*------------------------------------*/
+/* EXTRA COMPONENTS	 */
+/*------------------------------------*/
+.divider {
+	display: inline-block;
+	width: 0;
+	height: 15rem;
+	margin: auto 0;
+	border-left: var(--blue-line);
+	border-right: var(--blue-line);
+	@include respond(phone) {
+		display: none;
+	}
+}
+.underline {
+	float: right;
+	width: 9rem;
+	height: 0;
+	border-top: var(--big-blue-line);
+	border-bottom: var(--big-blue-line);
+}

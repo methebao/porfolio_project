@@ -1,0 +1,53 @@
+/*------------------------------------*/
+/* ANIMATIONS	 */
+/*------------------------------------*/
+
+@-webkit-keyframes move02FromTop {
+	0% {
+		margin-top: -40%;
+	}
+	100% {
+		margin-top: -25%;
+	}
+}
+
+@keyframes move02FromTop {
+	0% {
+		margin-top: -40%;
+	}
+	100% {
+		margin-top: -25%;
+	}
+}
+@-webkit-keyframes move03FromTop {
+	0% {
+		margin-top: -40%;
+	}
+	100% {
+		margin-top: -15%;
+	}
+}
+@keyframes move03FromTop {
+	0% {
+		margin-top: -40%;
+	}
+	100% {
+		margin-top: -15%;
+	}
+}
+@-webkit-keyframes move04FromTop {
+	0% {
+		margin-top: -70%;
+	}
+	100% {
+		margin-top: -50%;
+	}
+}
+@keyframes move04FromTop {
+	0% {
+		margin-top: -70%;
+	}
+	100% {
+		margin-top: -50%;
+	}
+}

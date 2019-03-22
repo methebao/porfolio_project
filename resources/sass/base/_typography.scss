@@ -1,0 +1,49 @@
+/*------------------------------------*/
+/* TYPOGRAPHY */
+/*------------------------------------*/
+.heading-primary {
+	font-size: 12rem;
+	text-transform: uppercase;
+	display: block;
+	font-family: var(--heading-font);
+	color: var(--color-white);
+	letter-spacing: 5px;
+	@include respond(phone) {
+		font-size: 10rem;
+	}
+}
+.heading-secondary {
+	font-size: 5rem;
+	font-family: var(--heading-font);
+	color: var(--color-primary-dark);
+	text-transform: uppercase;
+	&--white {
+		color: var(--color-white);
+	}
+}
+.heading-tertiary {
+	font-size: 3rem;
+	font-family: var(--heading-font);
+	color: var(--color-primary-dark);
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.big-size-paragraph {
+	font-size: 2.5rem;
+	color: var(--color-grey-dark-1);
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+	&--light {
+		font-family: var(--light-font);
+	}
+}
+.paragraph {
+	font-family: var(--light-font);
+	color: var(--color-grey-dark-1);
+	line-height: 1.3;
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}

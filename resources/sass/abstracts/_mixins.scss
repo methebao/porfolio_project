@@ -1,0 +1,52 @@
+@mixin absCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin centerFlexItems {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+/*------------------------------------*/
+/* MEDIA QUERIES MIXINS SYSTEM	 */
+/*------------------------------------*/
+
+/*
+	FROM--------------------TO-------------------DEVICES
+	0px                   	600px								 Phone
+	600px										900px								 Tablet Portrait
+	900px										1200px							 Tablet Landscape
+	1200px									1800px							 *Current Style Applying
+	1800px 									>1800px								Big Desktops
+*/
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) {
+			@content;
+		}
+	} @else {
+		// map-get function is alternative for switch case
+		// because sass doesnt support switch case
+		$maxWidth: map-get(
+			(
+				phone: 37.5em,
+				tab-port: 56.25em,
+				tab-land: 75em
+			),
+			$breakpoint
+		);
+		@media (max-width: $maxWidth) {
+			@content;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+:root {
+	--color-primary: #30a2ed;
+	--color-primary-light: #579ecc;
+	--color-primary-light-alpha: rgba(87, 158, 204, 0.8);
+	--color-primary-dark: #2980b9;
+	--color-primary-dark-alpha: rgba(41, 128, 185, 0.8);
+
+	--color-yellow: #f5a623;
+	--color-grey-light-1: #ebebeb;
+	--color-grey-light-2: #d8d8d8;
+	--color-white: #f8f8f8;
+	--color-white-alpha: rgba(255, 255, 255, 0.8);
+	--color-grey-dark-1: #606060;
+	--color-grey-dark-2: #383838;
+
+	--shadow-light: 0 0 0.5rem rgba(107, 107, 107, 0.3);
+	--shadow-dark: 0 0 3rem rgba(0, 0, 0, 0.267);
+	--line: 1px solid var(--color-grey-light-2);
+	--blue-line: 1px solid var(--color-primary-dark);
+	--big-blue-line: 2px solid var(--color-primary-dark);
+	--main-font: 'Source Sans Pro Regular', 'Lato', 'Arial', sans-serif;
+	--heading-font: 'DIN Condensed Bold', 'Lato', 'Arial', sans-serif;
+	--light-font: 'Source Sans Pro Light', 'Lato', 'Arial', sans-serif;
+}

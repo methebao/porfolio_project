@@ -1,0 +1,203 @@
+/*------------------------------------*/
+/* HOW IT BUILD SECTION */
+/*------------------------------------*/
+.how-it-build {
+	margin-top: -10vh;
+	-webkit-transform: skewY(3deg);
+	transform: skewY(3deg);
+	padding: 15rem 0;
+	@include respond(tab-port) {
+		padding: 10rem 0;
+	}
+	background-color: var(--color-white);
+	& > * {
+		-webkit-transform: skewY(-3deg);
+		transform: skewY(-3deg);
+	}
+	&__box {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		@include respond(phone) {
+			flex-direction: column;
+			padding: 0 3rem;
+		}
+	}
+}
+
+/*------------------------------------*/
+/* ABOUT ME SECTION */
+/*------------------------------------*/
+.about-me {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	background-color: var(--color-grey-light-1);
+	margin-top: -10rem;
+	padding: 20rem 15rem 10rem 15rem;
+	@include respond(tab-port) {
+		padding: 15rem 5rem 5rem 5rem;
+	}
+	@include respond(phone) {
+		padding: 15rem 2rem 5rem 2rem;
+		flex-direction: column;
+	}
+
+	&__info-box {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 1 45%;
+		flex: 0 1 45%;
+		@include centerFlexItems();
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+
+		& > div {
+			padding: 0 4rem;
+		}
+		@include respond(phone) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__more-box {
+		@include centerFlexItems();
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 1 45%;
+		flex: 0 1 45%;
+		& > div {
+			padding: 0 4rem;
+		}
+	}
+	&__buttons {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+}
+
+/*------------------------------------*/
+/* FEEDBACKS SECTION */
+/*------------------------------------*/
+.feed-backs {
+	background-image: -webkit-gradient(
+			linear,
+			left top,
+			right top,
+			from(var(--color-primary-dark-alpha)),
+			to(var(--color-primary-light-alpha))
+		),
+		url(../img/feed-backs/background.png);
+	background-image: linear-gradient(
+			to right,
+			var(--color-primary-dark-alpha),
+			var(--color-primary-light-alpha)
+		),
+		url(../img/feed-backs/background.png);
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 10rem;
+	@include respond(tab-land) {
+		padding: 5rem;
+	}
+	&__box {
+		@include centerFlexItems();
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		@include respond(phone) {
+			flex-direction: column;
+		}
+	}
+}
+
+/*------------------------------------*/
+/* MY WORKS SECTION */
+/*------------------------------------*/
+
+.my-works {
+	padding: 10rem 15rem;
+	@include respond(phone) {
+		padding: 5rem;
+	}
+	&__heading {
+		display: inline-block;
+		position: relative;
+	}
+	&__jump-buttons {
+		text-align: center;
+	}
+	&__jump-buttons a {
+		text-decoration: none;
+		display: inline-block;
+		width: 10rem;
+		background-color: var(--color-primary-dark);
+		border-radius: 5px;
+		font-size: 2rem;
+		font-family: var(--heading-font);
+		padding: 0.7rem 1rem 0.25rem 1rem;
+		color: var(--color-white);
+	}
+
+	&__jump-buttons a:not(:last-child) {
+		margin-right: 2rem;
+	}
+}
+
+/*------------------------------------*/
+/* CONTACT ME SECTION */
+/*------------------------------------*/
+.contact-me {
+	padding: 15rem;
+	@include respond(tab-land) {
+		padding: 10rem;
+	}
+	@include respond(phone) {
+		padding: 5rem;
+	}
+	@include centerFlexItems();
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right bottom,
+		from(var(--color-primary-light)),
+		to(var(--color-primary-dark))
+	);
+	background-image: linear-gradient(
+		to right bottom,
+		var(--color-primary-light),
+		var(--color-primary-dark)
+	);
+	&__form-box {
+		width: 100%;
+		padding: 6rem;
+		background-image: linear-gradient(
+				105deg,
+				var(--color-white-alpha) 0%,
+				var(--color-white-alpha) 50%,
+				transparent 50%
+			),
+			url('../img/contact-me/background-form.jpg');
+		@include respond(phone) {
+			background-image: linear-gradient(
+					var(--color-white-alpha) 0%,
+					var(--color-white-alpha) 100%
+				),
+				url(../img/contact-me/background-form.jpg);
+		}
+		background-size: cover;
+		border-radius: 3px;
+		-webkit-box-shadow: var(--shadow-dark);
+		box-shadow: var(--shadow-dark);
+	}
+}

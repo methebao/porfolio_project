@@ -1,0 +1,64 @@
+/*------------------------------------*/
+/* BUTTONS */
+/*------------------------------------*/
+.btn {
+	&,
+	&:link,
+	&:visited {
+		font-size: 1.8rem;
+		font-family: var(--light-font);
+		text-decoration: none;
+		display: inline-block;
+		border-radius: 5px;
+		padding: 1.5rem 3rem;
+		position: relative;
+		-webkit-transition: all 0.2s;
+		transition: all 0.2s;
+		/* for the <button>  */
+		border: none;
+		cursor: pointer;
+	}
+	&:hover {
+		-webkit-transform: translateY(-0.2rem);
+		transform: translateY(-0.2rem);
+		-webkit-box-shadow: var(--shadow-light);
+		box-shadow: var(--shadow-light);
+		&::after {
+			-webkit-transform: scaleX(1.4) scaleY(1.6);
+			transform: scaleX(1.4) scaleY(1.6);
+			opacity: 0;
+		}
+	}
+	&:active,
+	&:focus {
+		outline: none;
+		-webkit-transform: translateY(-0.1rem);
+		transform: translateY(-0.1rem);
+		-webkit-box-shadow: var(--shadow-light);
+		box-shadow: var(--shadow-light);
+	}
+	&:not(:last-child) {
+		margin-right: 2rem;
+	}
+
+	&--main {
+		background-color: var(--color-primary-dark);
+		color: var(--color-white);
+	}
+	&--outline {
+		background-color: transparent;
+		color: var(--color-primary-dark);
+		border: var(--blue-line) !important;
+	}
+	&--white {
+		background-color: var(--color-white);
+		color: var(--color-primary-dark);
+	}
+	&--heading {
+		font-family: var(--heading-font);
+		font-size: 2.5rem;
+
+		padding: 1.5rem 2.5rem 1rem 2.5rem;
+		text-transform: uppercase;
+	}
+}

@@ -1,0 +1,50 @@
+.slider {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	overflow-x: auto;
+	overflow: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	-ms-scroll-snap-points-x: repeat(100%);
+	scroll-snap-points-x: repeat(100%);
+	-ms-scroll-snap-type: x mandatory;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+	& > div:target {
+		color: var(--color-white);
+	}
+}
+
+.slide {
+	scroll-snap-align: start;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-ms-flex-negative: 0;
+	flex-shrink: 0;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 0 10rem;
+	@include respond(tab-land) {
+		padding: 0;
+	}
+	&__description-box {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 0 50%;
+		flex: 1 0 50%;
+	}
+	&__thumbnail-box {
+		-webkit-box-flex: 1;
+		-ms-flex: 1 0 50%;
+		flex: 1 0 50%;
+	}
+	&__thumbnail {
+		width: 100%;
+	}
+}

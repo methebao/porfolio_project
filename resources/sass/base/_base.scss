@@ -1,0 +1,74 @@
+/*------------------------------------*/
+/* FONT SETUP */
+/*------------------------------------*/
+
+@font-face {
+	font-family: 'DIN Condensed Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('DIN Condensed Bold'),
+		url('../../fonts/DINCondensed-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Source Sans Pro Light';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Source Sans Pro Light'),
+		url('../../fonts/SourceSansPro/SourceSansPro-Light.otf.woff') format('woff');
+}
+@font-face {
+	font-family: 'Source Sans Pro Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Source Sans Pro Regular'),
+		url('../../fonts/SourceSansPro/SourceSansPro-Regular.otf.woff')
+			format('woff');
+}
+@font-face {
+	font-family: 'Source Sans Pro Semibold';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Source Sans Pro Semibold'),
+		url('../../fonts/SourceSansPro/SourceSansPro-Semibold.otf.woff')
+			format('woff');
+}
+
+/*------------------------------------*/
+/* BASIC SETUP */
+/*------------------------------------*/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	/* 10px/16px = 62.5% => 1rem = 10px */
+	font-size: 62.5%;
+
+	@include respond(tab-land) {
+		/* 9px/16px = 56.25% => 1rem = 9px */
+		font-size: 56.25%;
+	}
+	@include respond(tab-port) {
+		/* 8px/16px = 50% => 1rem = 8px */
+		font-size: 50%;
+	}
+	@include respond(big-desktop) {
+		/* 12px/16px = 75% => 1rem = 12px */
+		font-size: 75%;
+	}
+}
+
+body {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: var(--main-font);
+	font-size: 1.5rem;
+	padding: 3rem;
+	@include respond(tab-port) {
+		padding: 0;
+	}
+}

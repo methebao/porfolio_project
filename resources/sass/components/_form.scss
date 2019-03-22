@@ -1,0 +1,87 @@
+.form {
+	width: 50%;
+	@include respond(phone) {
+		width: 100%;
+	}
+	&__group {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+	&__input {
+		font-size: 2rem;
+		padding: 1.5rem 2rem;
+		border-radius: 5px;
+		background-color: var(--color-white-alpha);
+		border: none;
+		border-bottom: 3px solid transparent;
+		width: 90%;
+		display: block;
+		-webkit-transition: all 0.2s;
+		transition: all 0.2s;
+		&:focus {
+			outline: none;
+			-webkit-box-shadow: var(--shadow-light);
+			box-shadow: var(--shadow-light);
+			border-bottom: var(--big-blue-line);
+		}
+		&:focus:invalid {
+			border-bottom: 3px solid var(--color-yellow);
+		}
+		&::-webkit-input-placeholder {
+			color: var(--color-grey-dark-1);
+		}
+	}
+	&__label {
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin-left: 2rem;
+		margin-top: 0.7rem;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transform: translateY(-4rem);
+		transform: translateY(-4rem);
+	}
+	&__radio-group {
+		width: 49%;
+		display: inline-block;
+	}
+	&__radio-input {
+		display: none;
+	}
+	&__radio-label {
+		font-size: 2rem;
+		cursor: pointer;
+		position: relative;
+		padding-left: 4.5rem;
+	}
+	&__radio-button {
+		height: 3rem;
+		width: 3rem;
+		border: 5px solid var(--color-primary-dark);
+		border-radius: 50%;
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		top: -0.4rem;
+		&::after {
+			@include absCenter();
+			content: '';
+			display: block;
+			height: 1.3rem;
+			width: 1.3rem;
+			border-radius: 50%;
+			background-color: var(--color-primary-dark);
+			opacity: 0;
+			-webkit-transition: opacity 0.2s;
+			transition: opacity 0.2s;
+		}
+	}
+	&__radio-input:checked ~ &__radio-label &__radio-button::after {
+		opacity: 1;
+	}
+}
